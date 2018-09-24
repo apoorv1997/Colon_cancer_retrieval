@@ -1,0 +1,605 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Colon Cancer Detection</title>
+
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/core-style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="medica-load"></div>
+        <img src="{% static 'img/core-img/plus.png' %}" alt="logo">
+    </div>
+
+
+    <header class="header-area">
+
+        <div class="top-header-area gradient-background">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+                            <div class="top-header-social-info">
+                                <a href="#" data-toggle="tooltip" data-placement="left" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="left" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="left" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="top-header-menu">
+                                <nav class="top-menu">
+                                    <ul>
+                                        <li><a href="app">Chat with us</a></li>
+                                        <li><a href="#contact">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+
+                                <a class="navbar-brand" href="index.html"><h1>Colon Cancer Detection</h1></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medicaMenu" aria-controls="medicaMenu" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i> Menu</button>
+
+                                <div class="collapse navbar-collapse" id="medicaMenu">
+
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        {% comment %} <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="index.html">Home</a>
+                                                <a class="dropdown-item" href="#about">About Us</a>
+                                                <a class="dropdown-item" href="#service">Services</a>
+                                                <a class="dropdown-item" href="#contact">Contact</a>
+                                            </div>
+                                        </li> {% endcomment %}
+                                        {% comment %} <li class="nav-item">
+                                            <a class="nav-link" href="#about">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#service">Services</a>
+                                        </li> {% endcomment %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#contact">Contact Us</a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="header-search-form ml-auto">
+                                        <form action="#">
+                                            <input type="search" class="form-control" placeholder="Input your keyword then press enter..." id="search" name="search">
+                                            <input class="d-none" type="submit" value="submit">
+                                        </form>
+                                    </div>
+
+                                    <div id="searchbtn">
+                                        <i class="ti-search" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+
+            <div class="single-hero-slide height-500 bg-img" style="background-image: url(/static/img/bg-img/lol.png);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                                <h2 data-animation="fadeInUp" data-delay="100ms" style="color:black;">Detected Using Siamese Neural Network.</h2>
+                                <h5 data-animation="fadeInUp" data-delay="400ms" ></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-hero-slide height-500 bg-img" style="background-image: url(/static/img/bg-img/banner.jpg);">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <div class="hero-slides-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <div class="medica-contact-info-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/icons/alarm-clock.png' %}" alt="">
+                        </div>
+                        <div class="contact-meta">
+                            <p>Monday - Friday 08:00 - 21:00 <br> Saturday and Sunday - CLOSED</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/icons/envelope.png' %}" alt="">
+                        </div>
+                        <div class="contact-meta">
+                            <p>+91 85559 35457 | +91 98331 96565 <br> apoorv.b15@iiits.in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/icons/map-pin.png' %}" alt="">
+                        </div>
+                        <div class="contact-meta">
+                            <p>Sri City, Chittoor <br>Andhra Pradesh </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="medica-contact-info-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-4 col-md-6 col-lg-4">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-meta">
+                            <button type="button" class="btn btn-primary" onclick="show()">Show reults</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-md-6 col-lg-4">
+                    <div class="single-contact-info d-flex align-items-center">
+                      <form method="POST" action="{% url 'mlapi' %}">
+                      <input type="file" id="inputFile" accept="image/*" value="Upload/" name="query_image">
+                      <button type="submit"></button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="medica-contact-info-area">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-2" id="images1">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/bg-img/img5_1.jpeg' %}" alt="" style="width:120px;height:120px;border:1px solid black">
+                            <p>Retrieved Image</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" id="images2">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/bg-img/img5_4.jpeg' %}" alt="" style="width:120px;height:120px;border:1px solid black">
+                            <p>Retrieved Image</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" id="images3">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/bg-img/img5_5.jpeg' %}" alt="" style="width:120px;height:120px;border:1px solid black;diplay:none">
+                            <p>Retrieved Image</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" id="images4">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/bg-img/img5_6.jpeg' %}" alt="" style="width:120px;height:120px;border:1px solid black">
+                            <p>Retrieved Image</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2" id="images5">
+                    <div class="single-contact-info d-flex align-items-center">
+                        <div class="contact-icon mr-30">
+                            <img src="{% static 'img/bg-img/img5_7.jpeg' %}" alt="" style="width:120px;height:120px;border:1px solid black">
+                            <p>Retrieved Image</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="medica-about-us-area" id="about">
+
+
+    </section>
+
+    {% comment %} <section class="medica-services-area section_padding_100 bg-img gradient-background-overlay" style="background-image: url(/static/img/bg-img/service.jpg);" id="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading white-heading">
+                        <img src="{% static 'img/icons/hospital2.png' %}" alt="">
+                        <h2>Our Services</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="{% static 'img/icons/hospital.png' %}" alt="">
+                        <h5>Ambulatory Care</h5>
+                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula nibh.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.3s">
+                        <img src="{% static 'img/icons/blood.png' %}" alt="">
+                        <h5>Laboratory</h5>
+                        <p>Laboratory handled by over 50 indivisuals and also people who will assist you in carrying your tests out without any delay.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.4s">
+                        <img src="{% static 'img/icons/ambulance.png' %}" alt="">
+                        <h5>Ambulance Service</h5>
+                        <p>Service like never before, reachers within 30 minutes* at your doorstep without any delay.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.5s">
+                        <img src="{% static 'img/icons/nuclear.png' %}" alt="">
+                        <h5>Radiology</h5>
+                        <p>Tests taken in clean and peacefull environment.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="{% static 'img/icons/emergency-call.png' %}" alt="">
+                        <h5>Emergency Care</h5>
+                        <p>A 24/7 open casualty room which assits you freely without costing you anything.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="single-service-area">
+                        <img src="{% static 'img/icons/medicine.png' %}" alt="">
+                        <h5>Pharmacy</h5>
+                        <p>Phasellus at nunc orci. Donec ipsum metus, pharetr a quis nunc sit amet, maximus vehicula nibh.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="#" class="btn medica-btn">See All Services</a>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+
+
+    {% comment %} <section class="medica-testimonials-area section_padding_100 bg-img background-overlay" style="background-image: url(img/bg-img/hero2.jpg);" id="testimonal">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading white-heading">
+                        <img src="{% static 'img/icons/stethoscope.png' %}" alt="">
+                        <h2>Clients Testimonials</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonials-slider owl-carousel">
+
+            <div class="single-testimonial-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>“6 yrs ago, no one in the family or even me, ever thought I would take up Astronomy and Science! Just a casual conversation, post transplant, with Dr Anand Khakhar, Apollo Hospital , triggered off this childhood passion in me Today I am doing online courses in Physics, Chemistry, Astronomy, Astrophysics and Observational Astronomy. Enjoy the 2nd innings given to you by the Donor and your Doctors! ”</h6>
+                            <div class="testimonial-given-author-info">
+                                <img src="{% static 'img/bg-img/testimonials2.jpg' %}" alt="">
+                                <h6>R.Natarajan</h6>
+                                <p>Pacient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-testimonial-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>“When I was 80 in 2010, my surgeon Dr.Paul Ramesh told me that if I if I chose medicinal aid it will be palliative but choosing bypass surgery will be more curative. The one memorable line which made me decide on surgery was his saying "I will do it as I would do it to my father. ”</h6>
+                            <div class="testimonial-given-author-info">
+                                <img src="{% static 'img/bg-img/testimonials2.jpg' %}" alt="">
+                                <h6>Ms. Leela Kalyanaraman</h6>
+                                <p>Pacient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="single-testimonial-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>“I come from a family of doctors and I was suffering from morbid obesity with co-morbidities like diabetes, hypertension, and sleep apnoea. It was becoming increasingly difficult for me to concentrate on my practice and continue my day today life. I've been consulted... ”</h6>
+                            <div class="testimonial-given-author-info">
+                                <img src="{% static 'img/bg-img/testimonials2.jpg' %}" alt="">
+                                <h6>Dr. Rama Devi</h6>
+                                <p>Pacient</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <section class="medica-call-to-action section_padding_50_0 gradient-background" id="appointment">
+        <div class="container">
+            <div class="row">
+
+                <!-- <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact wow fadeIn" data-wow-delay="0.2s">
+                        <div class="counter-area">
+                            <h2><span class="counter">0.33</span></h2>
+                            <h6>Precision</h6>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact wow fadeIn" data-wow-delay="0.6s">
+                        <div class="counter-area">
+                            <h2><span class="counter">0.13</span></h2>
+                            <h6>Average Recall</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact wow fadeIn" data-wow-delay="1s">
+                        <div class="counter-area">
+                            <h2><span class="counter">0.34</span></h2>
+                            <h6>Average F1 Score</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-cool-fact wow fadeIn" data-wow-delay="1.4s">
+                        <div class="counter-area">
+                            <h2><span class="counter">0.245</span></h2>
+                            <h6>M.A.P( Mean average precision)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% comment %} <section class="medica-book-an-appointment-area section_padding_100_0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <div class="medica-appointment-card">
+                        <h5>Book an apppointment</h5>
+
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control text-white" name="name" id="appointmentName" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        <select class="form-control" id="speciality">
+                                            <option>Speciality 1</option>
+                                            <option>Speciality 2</option>
+                                            <option>Speciality 3</option>
+                                            <option>Speciality 4</option>
+                                            <option>Speciality 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="number" id="appointmentNumber" placeholder="Phone">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        <select class="form-control" id="doctors">
+                                            <option>Dr. Riyadh Khan</option>
+                                            <option>Dr. Kumkum Rashid</option>
+                                            <option>Dr. Lim Sarah</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email" id="appointmentEmail" placeholder="E-mail">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-group">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <input type="date" class="form-control" name="date" id="date">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn medica-btn mt-15">Make an Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="medica-appointment-thumb">
+                        <img src="{% static 'img/bg-img/medical1.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    {% comment %} <div class="medica-our-partners-area section_padding_100">
+
+    </div> {% endcomment %}
+
+    <footer class="footer-area" id="contact">
+
+        <div class="main-footer-area section_padding_100 bg-default">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <h1 style="color:white">Colon Cancer Detection</h1>
+                            </div>
+                            <p>We provide world class<br> healthcare at affordable price. More than 30 professionals who work here very hard to ensure a healthy environment.</p>
+                            <div class="footer-social-info">
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#" data-toggle="tooltip" data-placement="top" title="Linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Usefull links</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#appointment">Book an Appointment</a></li>
+                                <li><a href="#contact">Contacts</a></li>
+                                <li><a href="#testimonal">Testimonials</a></li>
+                                <li><a href="#doctor">Doctors</a></li>
+                                <li><a href="#service">Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>contact us</h6>
+                            </div>
+
+                            <div class="widget-contact">
+
+                                <div class="widget-single-contact d-flex align-items-center">
+                                    <div class="widget-contact-thumbnail mr-15">
+                                        <img src="{% static  'img/icons/alarm-clock.png' %}" alt="">
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <p>Monday - Friday 08:00 - 21:00 <br>Saturday &amp; Sunday - CLOSED</p>
+                                    </div>
+                                </div>
+
+                                <div class="widget-single-contact d-flex align-items-center">
+                                    <div class="widget-contact-thumbnail mr-15">
+                                        <img src="{% static 'img/icons/map-pin.png' %}" alt="">
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <p>Sri City, Chittoor <br>Andhra Pradesh </p>
+                                    </div>
+                                </div>
+
+                                <div class="widget-single-contact d-flex align-items-center">
+                                    <div class="widget-contact-thumbnail mr-15">
+                                        <img src="{% static 'img/icons/envelope.png'%}" alt="">
+                                    </div>
+                                    <div class="widget-contact-info">
+                                        <p>+91 85559 35457 | +91 98331 96565 <br> apoorv.b15@iiits.in</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js' %}"></script>
+
+    <script src="{% static 'js/popper.min.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'js/plugins.js' %}"></script>
+
+    <script src="{% static 'js/active.js' %}"></script>
+
+</body>
+<script async src="{% static 'js/opencv.js' %}" onload="onOpenCvReady();" type="text/javascript"></script>
+<script>
+setTimeout(function show() {
+  document.getElementById('images1').style.display = "inline";
+  document.getElementById('images2').style.display = "inline";
+  document.getElementById('images3').style.display = "inline";
+  document.getElementById('images4').style.display = "inline";
+  document.getElementById('images5').style.display = "inline";
+}, 10000);
+function onOpenCvReady() {
+    let imgElement = document.getElementById('imageUpload');
+    let inputElement = document.getElementById('inputFile');
+    inputElement.onchange = function() {
+        imgElement.src = URL.createObjectURL(event.target.files[0]);
+    };
+    console.log("adas");
+}
+
+</script>
+
+</html>
